@@ -16,9 +16,10 @@ import static org.junit.jupiter.params.shadow.com.univocity.parsers.conversions.
 
 public class orderCardTest {
     private WebDriver driver;
-    @BeforeClass
-    public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
+
+    @BeforeAll
+      static void setUpAll() {
+    WebDriverManager.chromedriver().setup();
         }
 
     @BeforeEach
