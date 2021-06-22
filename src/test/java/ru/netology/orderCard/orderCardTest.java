@@ -17,7 +17,7 @@ public class orderCardTest {
     @BeforeAll
     static void setUpAll() {
         // убедитесь, что файл chromedriver.exe расположен именно в каталоге C:\tmp
-        System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "./driver/chromedriver");
     }
     @BeforeEach
     void setUp() {
