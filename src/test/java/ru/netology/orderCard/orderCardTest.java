@@ -1,6 +1,7 @@
 package ru.netology.orderCard;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,15 +16,11 @@ import static org.junit.jupiter.params.shadow.com.univocity.parsers.conversions.
 
 public class orderCardTest {
     private WebDriver driver;
-    @BeforeAll
-    static void setUpAll() {
-        // убедитесь, что файл chromedriver.exe расположен именно в каталоге C:\tmp
-        @BeforeAll
-        static void setUpAll() {
-            WebDriverManager.chromedriver().setup();
+    @BeforeClass
+    public static void setupClass() {
+        WebDriverManager.chromedriver().setup();
         }
 
-    }
     @BeforeEach
     void setUp() {
         driver = new ChromeDriver();
